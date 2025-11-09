@@ -1,0 +1,14 @@
+{
+  "name": "world-explorer",
+  "version": "1.0.0",
+  "description": "World Explorer - Electron + REST Countries API (OOP style)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^26.0.0"
+  },
+  "author": "",
+  "license": "MIT"
+}

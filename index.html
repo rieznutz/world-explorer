@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>World Explorer — Search</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="brand">
+      <h1>World Explorer</h1>
+      <p class="tag">Discover · Plan · Travel</p>
+    </div>
+    <div class="nav-right">
+      <button id="goItinerary" class="btn primary small">My Itinerary</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    
+    <section class="search-card">
+      <h2>Search Country</h2>
+      <div class="row">
+        <input 
+          id="inputName" 
+          type="search" 
+          autocomplete="off" 
+          placeholder="Type a country name (e.g., Japan, France)" 
+        />
+        <button id="btnSearch" class="btn primary">Search</button>
+      </div>
+      <p id="hint" class="hint">
+        Tip: enter a full or partial name, e.g., “Malaysia”, “Japan”.
+      </p>
+    </section>
+
+
+    <section id="error" class="error hidden"></section>
+
+  
+    <section id="result" class="result-card hidden" aria-live="polite">
+      <div class="flag-area">
+        <img id="flag" src="" alt="Country flag" />
+      </div>
+
+      <div class="info">
+        <div class="info-head">
+          <h2 id="countryName"></h2>
+          <div class="meta-inline">
+            <span id="regionBadge" class="badge"></span>
+            <span id="populationBadge" class="badge muted"></span>
+          </div>
+        </div>
+
+        <ul class="meta">
+          <li><strong>Capital:</strong> <span id="capital"></span></li>
+          <li><strong>Continent:</strong> <span id="continent"></span></li>
+          <li><strong>Area (km²):</strong> <span id="area"></span></li>
+          <li><strong>Timezones:</strong> <span id="timezones"></span></li>
+          <li><strong>Languages:</strong> <span id="languages"></span></li>
+        </ul>
+
+        <div class="actions">
+          <button id="saveItinerary" class="btn primary">Save to Itinerary</button>
+          <a id="mapsLink" class="btn" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">World Explorer • Desktop App</footer>
+  <script src="renderer.js"></script>
+</body>
+</html>

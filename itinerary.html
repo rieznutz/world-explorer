@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>World Explorer — Itinerary</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="brand">
+      <h1>My Itinerary</h1>
+      <p class="tag">Plans · Status · Notes</p>
+    </div>
+    <div class="nav-right">
+      <button id="backHome" class="btn">Back to Search</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="itinerary-card">
+      <h2>Saved Plans</h2>
+      <div id="listArea" class="list-area"></div>
+
+      <hr />
+
+      <h3>Add Manual Itinerary</h3>
+      <div class="form-grid">
+        <input id="manualCountry" placeholder="Country" />
+        <input id="manualDate" type="date" />
+        <select id="manualStatus">
+          <option>Planned</option>
+          <option>Booked</option>
+          <option>Completed</option>
+        </select>
+        <textarea id="manualNote" placeholder="Note / summary"></textarea>
+        <div class="form-actions">
+          <button id="manualAdd" class="btn primary">Add</button>
+          <button id="clearAll" class="btn danger">Clear All</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">World Explorer • Itinerary</footer>
+  <script src="itinerary.js"></script>
+</body>
+</html>
